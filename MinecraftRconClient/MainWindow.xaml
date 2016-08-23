@@ -1,0 +1,42 @@
+﻿<Controls:MetroWindow x:Class="MinecraftRconClient.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MinecraftRconClient"
+        mc:Ignorable="d"
+        xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
+	    xmlns:Behaviours="clr-namespace:MahApps.Metro.Behaviours;assembly=MahApps.Metro"
+        xmlns:Controls="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
+        WindowStartupLocation="CenterScreen" GlowBrush="{DynamicResource AccentColorBrush}" ShowIconOnTitleBar="False" ShowMinButton="False" ShowMaxRestoreButton="False" ResizeMode="CanMinimize"
+        Title="登陆" Height="113" Width="386" Loaded="MetroWindow_Loaded" PreviewKeyDown="MetroWindow_PreviewKeyDown" Icon="MRC.ico">
+    <Controls:MetroWindow.RightWindowCommands>
+        <Controls:WindowCommands>
+            <Button x:Name="helpBtn" Click="helpBtn_Click">
+                <StackPanel Orientation="Horizontal">
+                    <Rectangle Width="20" Height="20" Margin="0 0 0 0" Fill="{Binding RelativeSource={RelativeSource AncestorType=Button}, Path=Foreground}" >
+                        <Rectangle.OpacityMask>
+                            <VisualBrush Stretch="Fill" Visual="{StaticResource appbar_city}"></VisualBrush>
+                        </Rectangle.OpacityMask>
+                    </Rectangle>
+                    <TextBlock Margin="4 0 0 0" VerticalAlignment="Center" Text="帮助"></TextBlock>
+                </StackPanel>
+            </Button>
+        </Controls:WindowCommands>
+    </Controls:MetroWindow.RightWindowCommands>
+    <Grid>
+        <Grid HorizontalAlignment="Left" Height="28" Margin="10,10,0,0" VerticalAlignment="Top" Width="358">
+            <Controls:NumericUpDown x:Name="inputIP1" Margin="0,0,296,0" HideUpDownButtons="True" Minimum="0" Maximum="255" Controls:TextBoxHelper.Watermark="IP" PreviewKeyDown="inputIP1_PreviewKeyDown" Focusable="True" HasDecimals="False"/>
+            <Label Content="." HorizontalAlignment="Left" Margin="62,0,0,0" Height="28" VerticalContentAlignment="Bottom" HorizontalContentAlignment="Center" VerticalAlignment="Top" Width="12"/>
+            <Controls:NumericUpDown x:Name="inputIP2" Margin="74,0,222,0" HideUpDownButtons="True" Minimum="0" Maximum="255" PreviewKeyDown="inputIP2_PreviewKeyDown" Focusable="True" HasDecimals="False"/>
+            <Label Content="." HorizontalAlignment="Left" Margin="136,0,0,0" Height="28" VerticalContentAlignment="Bottom" HorizontalContentAlignment="Center" VerticalAlignment="Top" Width="12"/>
+            <Controls:NumericUpDown x:Name="inputIP3" Margin="148,0" HideUpDownButtons="True" Minimum="0" Maximum="255" PreviewKeyDown="inputIP3_PreviewKeyDown" Focusable="True" HasDecimals="False"/>
+            <Label Content="." HorizontalAlignment="Left" Margin="210,0,0,0" Height="28" VerticalContentAlignment="Bottom" HorizontalContentAlignment="Center" VerticalAlignment="Top" Width="12"/>
+            <Controls:NumericUpDown x:Name="inputIP4" Margin="222,0,74,0" HideUpDownButtons="True" Minimum="0" Maximum="255" PreviewKeyDown="inputIP4_PreviewKeyDown" Focusable="True" HasDecimals="False"/>
+            <Label Content=":" HorizontalAlignment="Left" Margin="284,0,0,0" Height="28" VerticalContentAlignment="Bottom" HorizontalContentAlignment="Center" VerticalAlignment="Top" Width="12"/>
+            <Controls:NumericUpDown x:Name="inputPort" Margin="296,0,0,0" HideUpDownButtons="True" Minimum="0" Maximum="65535" Controls:TextBoxHelper.Watermark="端口" HorizontalContentAlignment="Left" Focusable="True" HasDecimals="False"/>
+        </Grid>
+        <PasswordBox x:Name="inputPassword" HorizontalAlignment="Left" Height="23" Margin="10,45,0,0" VerticalAlignment="Top" Width="284" Controls:TextBoxHelper.Watermark="密码，回车以登陆" Controls:TextBoxHelper.ClearTextButton="True" PreviewKeyDown="inputPassword_PreviewKeyDown" PasswordChar="●" Controls:PasswordBoxHelper.CapsLockWarningToolTip="大写锁定已打开！"/>
+        <Button x:Name="saveBtn" Content="保存" HorizontalAlignment="Left" Margin="299,45,0,0" VerticalAlignment="Top" Width="69" Height="26" Style="{DynamicResource SquareButtonStyle}" Click="saveBtn_Click"/>
+    </Grid>
+</Controls:MetroWindow>

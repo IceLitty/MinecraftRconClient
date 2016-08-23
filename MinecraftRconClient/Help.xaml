@@ -1,0 +1,25 @@
+﻿<Controls:MetroWindow x:Class="MinecraftRconClient.Help"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MinecraftRconClient"
+        mc:Ignorable="d"
+        xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
+	    xmlns:Behaviours="clr-namespace:MahApps.Metro.Behaviours;assembly=MahApps.Metro"
+        xmlns:Controls="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
+        WindowStartupLocation="CenterScreen" GlowBrush="{DynamicResource AccentColorBrush}" ShowIconOnTitleBar="False" ShowMinButton="False" ShowMaxRestoreButton="False" ResizeMode="CanMinimize" Icon="MRC.ico"
+        Title="帮助" Height="220" Width="550">
+    <Grid>
+        <Label Content="要使用此功能，必须将服务器配置文件（server.properties）中的下列项目改为您所想设置的值：" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top"/>
+        <Label Content="enable-rcon=true&#13;rcon.password=登陆密码&#13;rcon.port=登陆端口" HorizontalAlignment="Left" Margin="23,35,0,0" VerticalAlignment="Top"/>
+        <Label Content="内建指令（指令前加上`符号即可执行内建指令，按键位于大键盘数字键1左侧）：" HorizontalAlignment="Left" Margin="10,96,0,0" VerticalAlignment="Top"/>
+        <Label Content="help/?        可查看程序内的内建指令帮助文档。" HorizontalAlignment="Left" Margin="23,126,0,0" VerticalAlignment="Top"/>
+        <Grid Margin="352,146,10,10">
+            <Grid.ToolTip>
+                <Image HorizontalAlignment="Left" VerticalAlignment="Top" Source="MRC.ico"/>
+            </Grid.ToolTip>
+            <Label x:Name="web" Content="Minecraft Rcon Client by Ice" HorizontalAlignment="Left" VerticalAlignment="Top" HorizontalContentAlignment="Right" Foreground="#FFA2A2A2" MouseLeftButtonDown="web_MouseLeftButtonDown" Margin="10,10,0,0"/>
+        </Grid>
+    </Grid>
+</Controls:MetroWindow>
