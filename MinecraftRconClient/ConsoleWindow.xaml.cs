@@ -35,7 +35,7 @@ namespace MinecraftRconClient
             timer.Start();
         }
 
-        void timer_Tick(object sender, EventArgs e)
+        private void timer_Tick(object sender, EventArgs e)
         {
             if (tellMainThread != string.Empty)
             {
@@ -43,8 +43,13 @@ namespace MinecraftRconClient
                 readLog();
                 tellMainThread = string.Empty;
             }
+            if (ESCPassTime >= 0)
+            {
+                ESCPassTime--;
+            }
         }
 
+        private int ESCPassTime = 0;
         private string tellMainThread = string.Empty;
         private RCONClient rcon = RCONClient.INSTANCE;
 
@@ -124,7 +129,8 @@ namespace MinecraftRconClient
                                             tellMainThread = "Get system info finished! Please type command again.";
                                         });
                                         t.Start();
-                                    } catch (Exception) { }
+                                    }
+                                    catch (Exception) { }
                                 }
                                 else
                                 {
@@ -179,6 +185,19 @@ namespace MinecraftRconClient
                     commandIn.Text = string.Empty;
                 }
             }
+            else if (e.Key == Key.Escape)
+            {
+                ESCPassTime = ESCPassTime + 10;
+                if (ESCPassTime > 10)  //一秒内按2次esc退出程序
+                {
+                    this.Close();
+                }
+                else
+                {
+                    setLog("Press again to exit program!");
+                    readLog();
+                }
+            }
             else if (e.Key == Key.Up)   //show history
             {
                 if (historyIndex > 0)
@@ -211,51 +230,51 @@ namespace MinecraftRconClient
             {
                 if (c_help.Count != 0 && commandIn.Text.Length == 0)
                 {
-                    e.Handled = true;
                     int tempindex = 0;
                     if (c_help.Count() > 1 && c_help_index != 0)
                     {
                         tempindex = c_help_index - 1;
                     }
-                    else
+                    if (c_help.Count() != 0)
                     {
+                        e.Handled = true;
                         tempindex = c_help.Count() - 1;
+                        commandIn.Text = c_help[tempindex].RemoveColorCodes() + " ";
+                        commandIn.Select(commandIn.Text.Length, 0);
+                        commandIn.ScrollToEnd();
                     }
-                    commandIn.Text = c_help[tempindex].RemoveColorCodes() + " ";
-                    commandIn.Select(commandIn.Text.Length, 0);
-                    commandIn.ScrollToEnd();
                 }
                 else if (commandIn.Text.Length == 1 && commandIn.Text != " ")
                 {
-                    e.Handled = true;
                     int tempindex = 0;
                     if (c_help_search.Count() > 1 && c_help_search_index != 0)
                     {
                         tempindex = c_help_search_index - 1;
                     }
-                    else
+                    if(c_help_search.Count() != 0)
                     {
+                        e.Handled = true;
                         tempindex = c_help_search.Count() - 1;
+                        commandIn.Text = c_help_search[tempindex].RemoveColorCodes() + " ";
+                        commandIn.Select(commandIn.Text.Length, 0);
+                        commandIn.ScrollToEnd();
                     }
-                    commandIn.Text = c_help_search[tempindex].RemoveColorCodes() + " ";
-                    commandIn.Select(commandIn.Text.Length, 0);
-                    commandIn.ScrollToEnd();
                 }
                 else if (commandIn.Text.Length == 2 && commandIn.Text != " ")
                 {
-                    e.Handled = true;
                     int tempindex = 0;
                     if (c_help_search.Count() > 1 && c_help_search_index != 0)
                     {
                         tempindex = c_help_search_index - 1;
                     }
-                    else
+                    if (c_help_search.Count() != 0)
                     {
+                        e.Handled = true;
                         tempindex = c_help_search.Count() - 1;
+                        commandIn.Text = c_help_search[tempindex].RemoveColorCodes() + " ";
+                        commandIn.Select(commandIn.Text.Length, 0);
+                        commandIn.ScrollToEnd();
                     }
-                    commandIn.Text = c_help_search[tempindex].RemoveColorCodes() + " ";
-                    commandIn.Select(commandIn.Text.Length, 0);
-                    commandIn.ScrollToEnd();
                 }
                 else if (c_playerList.Count() != 0 && (commandIn.Text == "ban " || commandIn.Text == "op " || commandIn.Text == "give " || commandIn.Text == "tellraw " || commandIn.Text == "replaceitem entity " || cmdEqu_name))
                 {
@@ -396,6 +415,12 @@ namespace MinecraftRconClient
                             c_playerList_index = 0;
                         }
                     }
+                }
+                //插入色彩符号
+                else
+                {
+                    commandIn.Text += "§";
+                    commandIn.Select(commandIn.Text.Length, 0);
                 }
             }
             else if (Keyboard.Modifiers == ModifierKeys.Shift && e.Key == Key.D2)   //press @

@@ -50,6 +50,10 @@ namespace MinecraftRconClient
                 help.ShowDialog();
                 this.Show();
             }
+            else if (e.Key == Key.Escape)
+            {
+                this.Close();
+            }
         }
 
         private void inputIP1_PreviewKeyDown(object sender, KeyEventArgs e)
@@ -63,6 +67,7 @@ namespace MinecraftRconClient
                     inputIP1.Value = int.Parse(ip1);
                 }
                 inputIP2.Focus();
+                inputIP2.SelectAll();
             }
         }
 
@@ -77,6 +82,7 @@ namespace MinecraftRconClient
                     inputIP2.Value = int.Parse(ip2);
                 }
                 inputIP3.Focus();
+                inputIP3.SelectAll();
             }
         }
 
@@ -91,6 +97,7 @@ namespace MinecraftRconClient
                     inputIP3.Value = int.Parse(ip3);
                 }
                 inputIP4.Focus();
+                inputIP4.SelectAll();
             }
         }
 
@@ -105,6 +112,7 @@ namespace MinecraftRconClient
                     inputIP4.Value = int.Parse(ip4);
                 }
                 inputPort.Focus();
+                inputPort.SelectAll();
             }
         }
 
