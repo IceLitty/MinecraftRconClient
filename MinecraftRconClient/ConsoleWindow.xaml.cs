@@ -143,21 +143,26 @@ namespace MinecraftRconClient
                         }
                         else if (cmd == "help" || cmd == "?")//内建指令帮助文档
                         {
-                            setLog("======================= §l帮助§r ========================");
+                            setLog("======================= §l§b帮助§r ========================");
                             setLog("§7在下列指令前输入`符号以表示此指令是内建指令。");
-                            setLog("§6clear\t§e> §r可清除日志和历史文件并清空终端输出。可用cls代替。");
-                            setLog("§6echo\t§e> §r回显用户输入的文本，如无文本则回显测试文本。测试文本第一次使用时需初始化，未加载好仅会显示空回显文本。");
-                            setLog("§6help\t§e> §r获取本帮助文档。可用?代替。");
-                            setLog("§6stop\t§e> §r退出程序。可用exit代替。");
-                            //setLog("§6     \t§e> §r?。可用?代替。");
-                            setLog("==================== §lTab补全功能§r ====================");
+                            setLog("§6clear  \t§e> §r可清除日志和历史文件并清空终端输出。可用§6cls§r代替。");
+                            setLog("§6echo   \t§e> §r回显用户输入的文本，如无文本则回显测试文本。测试文本第一次使用时需初始化，未加载好仅会显示空回显文本。");
+                            setLog("§6help   \t§e> §r获取本帮助文档。可用§6?§r代替。");
+                            setLog("§6restart\t§e> §r重新启动应用程序。");
+                            setLog("§6stop   \t§e> §r退出程序。可用§6exit§r代替。");
+                            setLog("==================== §bTab§l§b补全功能§r ====================");
                             setLog("§7下列帮助是操作说明：Tab按键补全功能，按空格键确认选择。");
                             setLog("§a      \t§b> §r在不输入任何文本时，按tab键可以补全全部指令，第一次使用需初始化。");
                             setLog("§a      \t§b> §r同样，在仅输入单个字母或两个字母时可使用tab键继续补全，如果初始化过则不需要再向服务器进行查询。");
-                            setLog("§aban/op\t§b> §r在输入此指令和空格后，按tab键可以切换玩家列表的选择，同时还可用于give和tellraw指令。");
+                            setLog("§aban   \t§b> §r在输入此指令和空格后，按tab键可以切换玩家列表的选择，同时还可用于§aban§r、§agive§r和§atellraw§r指令。");
                             setLog("§a      \t§b> §r在输入任何指令中，包含“name=”或“name=!”即可按tab补全玩家名，实体名称暂不支持。");
-                            //setLog("§a      \t§b> §r");
                             readLog();
+                        }
+                        else if (cmd == "restart")//重启
+                        {
+                            rcon.Dispose();
+                            System.Diagnostics.Process.Start(System.Reflection.Assembly.GetEntryAssembly().Location);
+                            this.Close();
                         }
                         else if (cmd == "stop" || cmd == "exit")//退出
                         {

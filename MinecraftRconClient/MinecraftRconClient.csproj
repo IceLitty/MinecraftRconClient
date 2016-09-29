@@ -135,7 +135,7 @@
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <Resource Include="Fonts\CPMono_v07 Plain.otf" />
-    <Resource Include="Fonts\CPMono_v07 Bold.otf" />
+    <Resource Include="Fonts\CPMono_v07 Black.otf" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

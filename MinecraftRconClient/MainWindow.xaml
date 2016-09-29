@@ -26,17 +26,17 @@
     </Controls:MetroWindow.RightWindowCommands>
     <Grid>
         <Grid HorizontalAlignment="Left" Height="28" Margin="10,10,0,0" VerticalAlignment="Top" Width="358">
-            <Controls:NumericUpDown x:Name="inputIP1" Margin="0,0,296,0" HideUpDownButtons="True" Minimum="0" Maximum="255" Controls:TextBoxHelper.Watermark="IP" PreviewKeyDown="inputIP1_PreviewKeyDown" Focusable="True" HasDecimals="False"/>
+            <Controls:NumericUpDown x:Name="inputIP1" Margin="0,0,296,0" HideUpDownButtons="True" Minimum="0" Maximum="255" Controls:TextBoxHelper.Watermark="IP" PreviewKeyDown="inputIP1_PreviewKeyDown" Focusable="True" HasDecimals="False" ValueChanged="inputIP1_ValueChanged"/>
             <Label Content="." HorizontalAlignment="Left" Margin="62,0,0,0" Height="28" VerticalContentAlignment="Bottom" HorizontalContentAlignment="Center" VerticalAlignment="Top" Width="12"/>
-            <Controls:NumericUpDown x:Name="inputIP2" Margin="74,0,222,0" HideUpDownButtons="True" Minimum="0" Maximum="255" PreviewKeyDown="inputIP2_PreviewKeyDown" Focusable="True" HasDecimals="False"/>
+            <Controls:NumericUpDown x:Name="inputIP2" Margin="74,0,222,0" HideUpDownButtons="True" Minimum="0" Maximum="255" PreviewKeyDown="inputIP2_PreviewKeyDown" Focusable="True" HasDecimals="False" ValueChanged="inputIP2_ValueChanged"/>
             <Label Content="." HorizontalAlignment="Left" Margin="136,0,0,0" Height="28" VerticalContentAlignment="Bottom" HorizontalContentAlignment="Center" VerticalAlignment="Top" Width="12"/>
-            <Controls:NumericUpDown x:Name="inputIP3" Margin="148,0" HideUpDownButtons="True" Minimum="0" Maximum="255" PreviewKeyDown="inputIP3_PreviewKeyDown" Focusable="True" HasDecimals="False"/>
+            <Controls:NumericUpDown x:Name="inputIP3" Margin="148,0" HideUpDownButtons="True" Minimum="0" Maximum="255" PreviewKeyDown="inputIP3_PreviewKeyDown" Focusable="True" HasDecimals="False" ValueChanged="inputIP3_ValueChanged"/>
             <Label Content="." HorizontalAlignment="Left" Margin="210,0,0,0" Height="28" VerticalContentAlignment="Bottom" HorizontalContentAlignment="Center" VerticalAlignment="Top" Width="12"/>
-            <Controls:NumericUpDown x:Name="inputIP4" Margin="222,0,74,0" HideUpDownButtons="True" Minimum="0" Maximum="255" PreviewKeyDown="inputIP4_PreviewKeyDown" Focusable="True" HasDecimals="False"/>
+            <Controls:NumericUpDown x:Name="inputIP4" Margin="222,0,74,0" HideUpDownButtons="True" Minimum="0" Maximum="255" PreviewKeyDown="inputIP4_PreviewKeyDown" Focusable="True" HasDecimals="False" ValueChanged="inputIP4_ValueChanged"/>
             <Label Content=":" HorizontalAlignment="Left" Margin="284,0,0,0" Height="28" VerticalContentAlignment="Bottom" HorizontalContentAlignment="Center" VerticalAlignment="Top" Width="12"/>
-            <Controls:NumericUpDown x:Name="inputPort" Margin="296,0,0,0" HideUpDownButtons="True" Minimum="0" Maximum="65535" Controls:TextBoxHelper.Watermark="端口" HorizontalContentAlignment="Left" Focusable="True" HasDecimals="False"/>
+            <Controls:NumericUpDown x:Name="inputPort" Margin="296,0,0,0" HideUpDownButtons="True" Minimum="0" Maximum="65535" Controls:TextBoxHelper.Watermark="端口" HorizontalContentAlignment="Left" Focusable="True" HasDecimals="False" ValueChanged="inputPort_ValueChanged"/>
         </Grid>
-        <PasswordBox x:Name="inputPassword" HorizontalAlignment="Left" Height="23" Margin="10,45,0,0" VerticalAlignment="Top" Width="284" Controls:TextBoxHelper.Watermark="密码，回车以登陆" Controls:TextBoxHelper.ClearTextButton="True" PreviewKeyDown="inputPassword_PreviewKeyDown" PasswordChar="●" Controls:PasswordBoxHelper.CapsLockWarningToolTip="大写锁定已打开！"/>
+        <PasswordBox x:Name="inputPassword" HorizontalAlignment="Left" Height="23" Margin="10,45,0,0" VerticalAlignment="Top" Width="284" Controls:TextBoxHelper.Watermark="密码，回车以登陆" Controls:TextBoxHelper.ClearTextButton="True" PreviewKeyDown="inputPassword_PreviewKeyDown" PasswordChar="●" Controls:PasswordBoxHelper.CapsLockWarningToolTip="大写锁定已打开！" PasswordChanged="inputPassword_PasswordChanged" ToolTip="密码，回车以登陆"/>
         <Button x:Name="saveBtn" Content="保存" HorizontalAlignment="Left" Margin="299,45,0,0" VerticalAlignment="Top" Width="69" Height="26" Style="{DynamicResource SquareButtonStyle}" Click="saveBtn_Click"/>
     </Grid>
 </Controls:MetroWindow>

@@ -178,7 +178,7 @@ namespace MinecraftRconClient
                         {
                             run = new Run(sptemp[j].Substring(1, sptemp[j].Length - 1));
                             run.Foreground = br;
-                            run.FontFamily = new FontFamily(new Uri("pack://application:,,,/Fonts/"), "./#CPMono_v07 Bold");
+                            run.FontFamily = new FontFamily(new Uri("pack://application:,,,/Fonts/"), "./#CPMono_v07 Black");
                             paragraph.Inlines.Add(run);
                             if (j + 1 != sptemp.Count())
                             {
@@ -186,7 +186,7 @@ namespace MinecraftRconClient
                                 {
                                     run = new Run(sptemp[j + 1].Substring(1, sptemp[j + 1].Length - 1));
                                     run.Foreground = br0;
-                                    run.FontFamily = new FontFamily(new Uri("pack://application:,,,/Fonts/"), "./#CPMono_v07 Bold");
+                                    run.FontFamily = new FontFamily(new Uri("pack://application:,,,/Fonts/"), "./#CPMono_v07 Black");
                                     paragraph.Inlines.Add(run);
                                     j++;
                                 }
@@ -194,7 +194,7 @@ namespace MinecraftRconClient
                                 {
                                     run = new Run(sptemp[j + 1].Substring(1, sptemp[j + 1].Length - 1));
                                     run.Foreground = br1;
-                                    run.FontFamily = new FontFamily(new Uri("pack://application:,,,/Fonts/"), "./#CPMono_v07 Bold");
+                                    run.FontFamily = new FontFamily(new Uri("pack://application:,,,/Fonts/"), "./#CPMono_v07 Black");
                                     paragraph.Inlines.Add(run);
                                     j++;
                                 }
@@ -202,7 +202,7 @@ namespace MinecraftRconClient
                                 {
                                     run = new Run(sptemp[j + 1].Substring(1, sptemp[j + 1].Length - 1));
                                     run.Foreground = br2;
-                                    run.FontFamily = new FontFamily(new Uri("pack://application:,,,/Fonts/"), "./#CPMono_v07 Bold");
+                                    run.FontFamily = new FontFamily(new Uri("pack://application:,,,/Fonts/"), "./#CPMono_v07 Black");
                                     paragraph.Inlines.Add(run);
                                     j++;
                                 }
@@ -210,7 +210,7 @@ namespace MinecraftRconClient
                                 {
                                     run = new Run(sptemp[j + 1].Substring(1, sptemp[j + 1].Length - 1));
                                     run.Foreground = br3;
-                                    run.FontFamily = new FontFamily(new Uri("pack://application:,,,/Fonts/"), "./#CPMono_v07 Bold");
+                                    run.FontFamily = new FontFamily(new Uri("pack://application:,,,/Fonts/"), "./#CPMono_v07 Black");
                                     paragraph.Inlines.Add(run);
                                     j++;
                                 }
@@ -218,7 +218,7 @@ namespace MinecraftRconClient
                                 {
                                     run = new Run(sptemp[j + 1].Substring(1, sptemp[j + 1].Length - 1));
                                     run.Foreground = br4;
-                                    run.FontFamily = new FontFamily(new Uri("pack://application:,,,/Fonts/"), "./#CPMono_v07 Bold");
+                                    run.FontFamily = new FontFamily(new Uri("pack://application:,,,/Fonts/"), "./#CPMono_v07 Black");
                                     paragraph.Inlines.Add(run);
                                     j++;
                                 }
@@ -226,7 +226,7 @@ namespace MinecraftRconClient
                                 {
                                     run = new Run(sptemp[j + 1].Substring(1, sptemp[j + 1].Length - 1));
                                     run.Foreground = br5;
-                                    run.FontFamily = new FontFamily(new Uri("pack://application:,,,/Fonts/"), "./#CPMono_v07 Bold");
+                                    run.FontFamily = new FontFamily(new Uri("pack://application:,,,/Fonts/"), "./#CPMono_v07 Black");
                                     paragraph.Inlines.Add(run);
                                     j++;
                                 }
@@ -234,7 +234,7 @@ namespace MinecraftRconClient
                                 {
                                     run = new Run(sptemp[j + 1].Substring(1, sptemp[j + 1].Length - 1));
                                     run.Foreground = br6;
-                                    run.FontFamily = new FontFamily(new Uri("pack://application:,,,/Fonts/"), "./#CPMono_v07 Bold");
+                                    run.FontFamily = new FontFamily(new Uri("pack://application:,,,/Fonts/"), "./#CPMono_v07 Black");
                                     paragraph.Inlines.Add(run);
                                     j++;
                                 }
@@ -242,7 +242,7 @@ namespace MinecraftRconClient
                                 {
                                     run = new Run(sptemp[j + 1].Substring(1, sptemp[j + 1].Length - 1));
                                     run.Foreground = br7;
-                                    run.FontFamily = new FontFamily(new Uri("pack://application:,,,/Fonts/"), "./#CPMono_v07 Bold");
+                                    run.FontFamily = new FontFamily(new Uri("pack://application:,,,/Fonts/"), "./#CPMono_v07 Black");
                                     paragraph.Inlines.Add(run);
                                     j++;
                                 }
@@ -250,7 +250,7 @@ namespace MinecraftRconClient
                                 {
                                     run = new Run(sptemp[j + 1].Substring(1, sptemp[j + 1].Length - 1));
                                     run.Foreground = br8;
-                                    run.FontFamily = new FontFamily(new Uri("pack://application:,,,/Fonts/"), "./#CPMono_v07 Bold");
+                                    run.FontFamily = new FontFamily(new Uri("pack://application:,,,/Fonts/"), "./#CPMono_v07 Black");
                                     paragraph.Inlines.Add(run);
                                     j++;
                                 }
@@ -258,7 +258,7 @@ namespace MinecraftRconClient
                                 {
                                     run = new Run(sptemp[j + 1].Substring(1, sptemp[j + 1].Length - 1));
                                     run.Foreground = br9;
-                                    run.FontFamily = new FontFamily(new Uri("pack://application:,,,/Fonts/"), "./#CPMono_v07 Bold");
+                                    run.FontFamily = new FontFamily(new Uri("pack://application:,,,/Fonts/"), "./#CPMono_v07 Black");
                                     paragraph.Inlines.Add(run);
                                     j++;
                                 }
@@ -266,7 +266,7 @@ namespace MinecraftRconClient
                                 {
                                     run = new Run(sptemp[j + 1].Substring(1, sptemp[j + 1].Length - 1));
                                     run.Foreground = bra;
-                                    run.FontFamily = new FontFamily(new Uri("pack://application:,,,/Fonts/"), "./#CPMono_v07 Bold");
+                                    run.FontFamily = new FontFamily(new Uri("pack://application:,,,/Fonts/"), "./#CPMono_v07 Black");
                                     paragraph.Inlines.Add(run);
                                     j++;
                                 }
@@ -274,7 +274,7 @@ namespace MinecraftRconClient
                                 {
                                     run = new Run(sptemp[j + 1].Substring(1, sptemp[j + 1].Length - 1));
                                     run.Foreground = brb;
-                                    run.FontFamily = new FontFamily(new Uri("pack://application:,,,/Fonts/"), "./#CPMono_v07 Bold");
+                                    run.FontFamily = new FontFamily(new Uri("pack://application:,,,/Fonts/"), "./#CPMono_v07 Black");
                                     paragraph.Inlines.Add(run);
                                     j++;
                                 }
@@ -282,7 +282,7 @@ namespace MinecraftRconClient
                                 {
                                     run = new Run(sptemp[j + 1].Substring(1, sptemp[j + 1].Length - 1));
                                     run.Foreground = brc;
-                                    run.FontFamily = new FontFamily(new Uri("pack://application:,,,/Fonts/"), "./#CPMono_v07 Bold");
+                                    run.FontFamily = new FontFamily(new Uri("pack://application:,,,/Fonts/"), "./#CPMono_v07 Black");
                                     paragraph.Inlines.Add(run);
                                     j++;
                                 }
@@ -290,7 +290,7 @@ namespace MinecraftRconClient
                                 {
                                     run = new Run(sptemp[j + 1].Substring(1, sptemp[j + 1].Length - 1));
                                     run.Foreground = brd;
-                                    run.FontFamily = new FontFamily(new Uri("pack://application:,,,/Fonts/"), "./#CPMono_v07 Bold");
+                                    run.FontFamily = new FontFamily(new Uri("pack://application:,,,/Fonts/"), "./#CPMono_v07 Black");
                                     paragraph.Inlines.Add(run);
                                     j++;
                                 }
@@ -298,7 +298,7 @@ namespace MinecraftRconClient
                                 {
                                     run = new Run(sptemp[j + 1].Substring(1, sptemp[j + 1].Length - 1));
                                     run.Foreground = bre;
-                                    run.FontFamily = new FontFamily(new Uri("pack://application:,,,/Fonts/"), "./#CPMono_v07 Bold");
+                                    run.FontFamily = new FontFamily(new Uri("pack://application:,,,/Fonts/"), "./#CPMono_v07 Black");
                                     paragraph.Inlines.Add(run);
                                     j++;
                                 }
@@ -306,7 +306,7 @@ namespace MinecraftRconClient
                                 {
                                     run = new Run(sptemp[j + 1].Substring(1, sptemp[j + 1].Length - 1));
                                     run.Foreground = brf;
-                                    run.FontFamily = new FontFamily(new Uri("pack://application:,,,/Fonts/"), "./#CPMono_v07 Bold");
+                                    run.FontFamily = new FontFamily(new Uri("pack://application:,,,/Fonts/"), "./#CPMono_v07 Black");
                                     paragraph.Inlines.Add(run);
                                     j++;
                                 }

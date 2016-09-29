@@ -179,8 +179,8 @@ namespace MinecraftRconClient
                 "\r\n§+  llllllllllllll  lllllllllllllllllll      §r" + "§6Graphics1: §r" + Graphics[0] + 
                 "\r\n§+  llllllllllllll  lllllllllllllllllll      §r" + "§6Graphics2: §r" + Graphics[1] + 
                 "\r\n§+  llllllllllllll  lllllllllllllllllll      §r" + "§6ColorTest: §r" + 
-                "\r\n§+  llllllllllllll  lllllllllllllllllll      §r" + "  §00  §11  §22  §33  §l§4l4  §l§5l5  §66  §77" + 
-                "\r\n§+  llllllllllllll  lllllllllllllllllll      §r" + "  §88  §99  §aa  §bb  §l§clc  §l§dld  §ee  §ff" + 
+                "\r\n§+  llllllllllllll  lllllllllllllllllll      §r" + "  §l§0l§00  §l§1l§11  §l§2l§22  §l§3l§33  §l§4l§44  §l§5l§55  §l§6l§66  §l§7l§77" + 
+                "\r\n§+  llllllllllllll  lllllllllllllllllll      §r" + "  §l§8l§88  §l§9l§99  §l§al§aa  §l§bl§bb  §l§cl§cc  §l§dl§dd  §l§el§ee  §l§fl§ff" + 
                 "\r\n§+  ,cclllllllllll  lllllllllllllllllll      §r" + "  §1测 §2试 §l§3文 §l§4本 §5測 §6試 §l§7文 §l§8本" +
                 "\r\n§+        ...,,+:;  cllllllllllllllllll      §r" + "  §9試 §l§a験 §l§bテ §cキ §dス §eト" +
                 "\r\n§+                      ....,,:;+ccllll      §r" + 
