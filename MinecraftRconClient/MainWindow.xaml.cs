@@ -31,19 +31,7 @@ namespace MinecraftRconClient
             {
                 try
                 {
-                    string[] ip = INI.ReadIni("connect", "IP").Split('.');
-                    ip0 = int.Parse(ip[0]);
-                    ip1 = int.Parse(ip[1]);
-                    ip2 = int.Parse(ip[2]);
-                    ip3 = int.Parse(ip[3]);
-                    port = int.Parse(INI.ReadIni("connect", "Port"));
-                    passwd = INI.ReadIni("connect", "Password");
-                    inputIP1.Value = ip0;
-                    inputIP2.Value = ip1;
-                    inputIP3.Value = ip2;
-                    inputIP4.Value = ip3;
-                    inputPort.Value = port;
-                    inputPassword.Password = passwd;
+                    loadFile();
                     Title = "登陆|已读取: " + inputPassword.Password + "@" + inputIP1.Value.Value + "." + inputIP2.Value.Value + "." + inputIP3.Value.Value + "." + inputIP4.Value.Value + ":" + inputPort.Value.Value;
                     this.ToolTip = Title;
                     sameAsFile = true;
@@ -55,6 +43,23 @@ namespace MinecraftRconClient
                     System.IO.File.Delete(connectFilePath);
                 }
             }
+        }
+
+        private void loadFile()
+        {
+            string[] ip = INI.ReadIni("connect", "IP").Split('.');
+            ip0 = int.Parse(ip[0]);
+            ip1 = int.Parse(ip[1]);
+            ip2 = int.Parse(ip[2]);
+            ip3 = int.Parse(ip[3]);
+            port = int.Parse(INI.ReadIni("connect", "Port"));
+            passwd = INI.ReadIni("connect", "Password");
+            inputIP1.Value = ip0;
+            inputIP2.Value = ip1;
+            inputIP3.Value = ip2;
+            inputIP4.Value = ip3;
+            inputPort.Value = port;
+            inputPassword.Password = passwd;
         }
 
         private void MetroWindow_PreviewKeyDown(object sender, KeyEventArgs e)
@@ -241,6 +246,7 @@ namespace MinecraftRconClient
                     INI.WriteIni("connect", "Password", inputPassword.Password);
                     Title = "登陆|已保存: " + inputPassword.Password + "@" + inputIP1.Value.Value + "." + inputIP2.Value.Value + "." + inputIP3.Value.Value + "." + inputIP4.Value.Value + ":" + inputPort.Value.Value;
                     this.ToolTip = Title;
+                    loadFile();
                 }
                 catch (Exception)
                 {
